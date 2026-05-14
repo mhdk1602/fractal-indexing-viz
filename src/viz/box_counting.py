@@ -64,14 +64,24 @@ def box_counting_dimension(
         )
     extent = max(bounds[1] - bounds[0], bounds[3] - bounds[2])
     sizes = np.geomspace(extent / 2, extent / (2 ** (n_scales - 1)), n_scales)
-    counts = np.array([box_count(points, s, bounds) for s in sizes])
-    counts = np.clip(counts, 1, None)
+    raw_counts = np.array([box_count(points, s, bounds) for s in sizes])
+    counts = np.clip(raw_counts, 1, None)
     log_inv_r = np.log(1.0 / sizes)
     log_n = np.log(counts)
-    # Fit middle 60% to avoid finite-size effects
-    lo = int(0.2 * n_scales)
-    hi = int(0.8 * n_scales)
-    slope, _ = np.polyfit(log_inv_r[lo:hi], log_n[lo:hi], 1)
+    # Restrict the fit to the linear scaling region: drop the saturated tail
+    # where N(r) approaches the point count (no more new boxes to fill) and
+    # drop the trivial head where N(r) ≤ 1. This is more robust than a fixed
+    # middle-60% window, which leaks into the saturated regime for sparse
+    # point sets in their embedding dimension.
+    n_pts = len(points)
+    in_scaling = (raw_counts > 1) & (raw_counts < 0.5 * n_pts)
+    if int(in_scaling.sum()) >= 2:
+        slope, _ = np.polyfit(log_inv_r[in_scaling], log_n[in_scaling], 1)
+    else:
+        # Fall back to the middle-60% window if the adaptive mask is too narrow.
+        lo = int(0.2 * n_scales)
+        hi = max(int(0.8 * n_scales), lo + 2)
+        slope, _ = np.polyfit(log_inv_r[lo:hi], log_n[lo:hi], 1)
     return float(slope), log_inv_r, log_n
 
 

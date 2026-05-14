@@ -47,11 +47,33 @@ manim -ql -p src/viz/box_counting.py BoxCountingScene
 
 (Manim renders separately; the Streamlit view embeds the pre-rendered video.)
 
+## Deploy to Streamlit Community Cloud
+
+The repo is already configured for one-click deployment on [share.streamlit.io](https://share.streamlit.io/). `requirements.txt` pins the runtime dependencies and `.streamlit/config.toml` sets the theme and page defaults.
+
+Steps:
+
+1. Go to https://share.streamlit.io/ and sign in. Use the `mhdk1602` GitHub account when prompted to authorize.
+2. Click **New app**.
+3. In the repository selector, choose `mhdk1602/fractal-indexing-viz`.
+4. Set **Branch** to `master` and **Main file path** to `app.py`.
+5. Click **Deploy**.
+
+The first build takes a few minutes. Subsequent pushes to `master` trigger automatic redeploys.
+
+Once the app is live, paste this badge at the top of the README (Streamlit gives you the URL after deploy):
+
+```markdown
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR-APP-NAME.streamlit.app/)
+```
+
 ## Repository structure
 
 ```
 fractal-indexing-viz/
 ├── app.py                       # Streamlit entry; sidebar routes to each view
+├── requirements.txt             # runtime deps for Streamlit Cloud
+├── .streamlit/config.toml       # theme + page defaults
 ├── src/viz/
 │   ├── hilbert_d2.py            # v0 — implemented
 │   ├── hnsw_lid.py              # v1 — stub
