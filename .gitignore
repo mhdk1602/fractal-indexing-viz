@@ -1,0 +1,36 @@
+non-git-files/
+
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+.venv/
+venv/
+env/
+
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+
+# Manim renders
+media/
+
+# Cached datasets
+data/
+*.parquet
+
+.ipynb_checkpoints/
+
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+.pytest_cache/
+.coverage
+
+.env
+.env.local
+*.secret

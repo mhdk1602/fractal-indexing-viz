@@ -1,0 +1,36 @@
+{
+  "title": "fractal-indexing-viz: Interactive visualizations for fractal mathematics in modern indexing systems",
+  "description": "A Streamlit application that makes fractal mathematics under modern indexing systems visceral and interactive. Five visualizations: (v0) Hilbert curves with intrinsic-dimension D2 heatmap overlay; (v1) HNSW layer rendering with local-intrinsic-dimensionality coloring; (v2) streaming MFDFA spectra on rolling financial windows; (v3) selectivity-estimation error comparison across PostgreSQL, DeepDB and D2-based estimators; (v4) Manim box-counting walk-through. Companion to the fractal-indexing research program; sources figures for the H2 pre-registration and the H3 pivot paper.",
+  "creators": [
+    {
+      "name": "Malempati Hari, Dineshkumar",
+      "orcid": "0009-0003-1036-9477",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "keywords": [
+    "visualization",
+    "streamlit",
+    "Hilbert-curve",
+    "HNSW",
+    "MFDFA",
+    "fractal",
+    "teaching"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/mhdk1602/fractal-indexing-viz",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.20188013",
+      "relation": "isPartOf",
+      "scheme": "doi"
+    }
+  ]
+}

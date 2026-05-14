@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use these visualizations or the underlying code, please cite the work via the Zenodo concept DOI minted on first release."
+title: "fractal-indexing-viz: Interactive visualizations for fractal mathematics in modern indexing systems"
+abstract: >-
+  A Streamlit application that makes the fractal mathematics underneath
+  modern indexing systems visceral and interactive. Five visualizations:
+  Hilbert curves with intrinsic-dimension D2 heatmap overlays; HNSW layer
+  rendering with local-intrinsic-dimensionality coloring; streaming MFDFA
+  spectra on rolling financial windows; selectivity-estimation error
+  comparison across PostgreSQL, DeepDB and D2-based estimators; and a
+  Manim box-counting walk-through. Companion to the fractal-indexing
+  research program; sources figures for the H2 and H3 papers.
+authors:
+  - family-names: "Malempati Hari"
+    given-names: "Dineshkumar"
+    orcid: "https://orcid.org/0009-0003-1036-9477"
+    affiliation: "Independent Researcher"
+identifiers: []
+license: MIT
+repository-code: "https://github.com/mhdk1602/fractal-indexing-viz"
+type: software
+version: "0.0.1"
+keywords:
+  - "visualization"
+  - "streamlit"
+  - "Hilbert-curve"
+  - "HNSW"
+  - "MFDFA"
+  - "fractal"
+  - "teaching"
