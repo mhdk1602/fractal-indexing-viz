@@ -5,7 +5,7 @@ imports the ``render`` callable from each module and routes the sidebar
 selection to it.
 """
 
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 __author__ = "Dineshkumar Malempati Hari"
 __orcid__ = "0009-0003-1036-9477"
 __license__ = "MIT"

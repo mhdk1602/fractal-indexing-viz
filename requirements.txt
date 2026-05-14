@@ -4,5 +4,8 @@ plotly>=5.18
 numpy>=1.24
 pandas>=2.0
 scipy>=1.10
+scikit-learn>=1.3
 MFDFA>=0.4
 yfinance>=0.2.37
+fractal-ann-diagnostics @ git+https://github.com/mhdk1602/fractal-ann-diagnostics.git@v0.1.1
+hurst-partitioning @ git+https://github.com/mhdk1602/hurst-aware-partitioning.git@v0.2.0

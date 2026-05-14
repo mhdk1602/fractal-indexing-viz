@@ -16,7 +16,35 @@ from viz.hilbert_d2 import d2xy, hilbert_path, xy2d
 
 
 def test_version_pinned() -> None:
-    assert __version__ == "0.0.1"
+    assert __version__ == "0.1.0"
+
+
+def test_new_view_modules_expose_render() -> None:
+    """The v1/v2/v3 modules must surface a callable ``render`` even with no
+    heavy dependencies installed. The bodies degrade gracefully via st.warning;
+    here we only assert importability + attribute presence."""
+    from viz import hnsw_lid, mfdfa_stream, selectivity_fan
+
+    assert callable(hnsw_lid.render)
+    assert callable(mfdfa_stream.render)
+    assert callable(selectivity_fan.render)
+
+
+def test_app_entrypoint_injects_src_path() -> None:
+    """app.py must prepend ``src/`` to sys.path before importing ``viz`` so
+    that ``streamlit run app.py`` works on Streamlit Community Cloud without
+    a ``pip install -e .`` step."""
+    import re
+    from pathlib import Path
+
+    app_text = Path("app.py").read_text(encoding="utf-8")
+    # Two checks: the sys.path.insert call exists, and it appears *before*
+    # the ``from viz`` line in the file.
+    insert_match = re.search(r"sys\.path\.insert\s*\(\s*0\s*,", app_text)
+    assert insert_match is not None
+    from_viz_match = re.search(r"^from viz import", app_text, re.MULTILINE)
+    assert from_viz_match is not None
+    assert insert_match.start() < from_viz_match.start()
 
 
 def test_hilbert_path_order_2_has_16_points() -> None:

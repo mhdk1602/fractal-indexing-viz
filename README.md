@@ -11,10 +11,15 @@ A practitioner who uses Z-order, Hilbert clustering, H3, S2, or HNSW typically d
 | View | Topic | Status |
 |---|---|---|
 | **v0** | Hilbert curve with intrinsic-dimension D₂ heatmap overlay (interactive zoom) | implemented |
-| **v1** | HNSW layer rendering, nodes coloured by local intrinsic dimensionality | stub |
-| **v2** | Streaming MFDFA spectrum on a rolling S&P window with Hurst-aware chunk boundaries overlaid | stub |
-| **v3** | Selectivity-estimation error fan chart: PostgreSQL histogram vs. DeepDB vs. correlation-dimension estimator | stub |
+| **v1** | HNSW layer rendering, nodes coloured by local intrinsic dimensionality | implemented (v0.1.0) |
+| **v2** | Streaming MFDFA spectrum on a rolling S&P window with Hurst-aware chunk boundaries overlaid | implemented (v0.1.0, fGn corpus) |
+| **v3** | Selectivity-estimation error fan chart: PostgreSQL histogram vs. DeepDB vs. correlation-dimension estimator | illustrative (v0.1.0) — real harness pending |
 | **v4** | Box-counting walk-through: boxes shrink, log-log plot grows, slope updates in real time | implemented |
+
+### Roadmap
+
+- **v0.1.0** — three views implemented. v1 wires the LID descriptor from `fractal-ann-diagnostics`; v2 wires the `HurstCIPartitioner` from `hurst-partitioning` against the registered fGn corpus; v3 ships an illustrative fan chart that will be replaced once the OLAP harness exists.
+- **v0.2.0+** — v3 backed by real PostgreSQL EXPLAIN + DeepDB measurements; v2 extended to the S&P series once the H2 pre-registration lock unlocks D1; v1 extended with a layer-stack 3-D view and an animated query trajectory.
 
 **Author:** [Dineshkumar Malempati Hari](https://orcid.org/0009-0003-1036-9477).
 

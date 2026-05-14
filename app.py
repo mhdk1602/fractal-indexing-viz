@@ -5,6 +5,15 @@ Run with:
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# Make ``src/viz`` importable when the app is launched by ``streamlit run app.py``
+# from the repo root (e.g. on Streamlit Community Cloud, which does not run
+# ``pip install -e .`` against the checkout). The local test suite injects the
+# same path via conftest, so this keeps the two entry points consistent.
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+
 import streamlit as st
 
 from viz import box_counting, hilbert_d2, hnsw_lid, mfdfa_stream, selectivity_fan
