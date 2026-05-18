@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="540" viewBox="0 0 1280 540" role="img" aria-labelledby="title desc">
+  <title id="title">Fractal Indexing Visualization Spike</title>
+  <desc id="desc">Dark technical banner: Hilbert curve composition, HNSW layer stack, MFDFA spectrum, and box-counting log-log slope panel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b14"/>
+      <stop offset="0.5" stop-color="#0d1a28"/>
+      <stop offset="1" stop-color="#10231c"/>
+    </linearGradient>
+    <linearGradient id="hilbert" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#55d6be"/>
+      <stop offset="0.5" stop-color="#6ea8fe"/>
+      <stop offset="1" stop-color="#f5b84b"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5b84b"/>
+      <stop offset="1" stop-color="#f25f5c"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#11202f" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#0a1320" stop-opacity="0.98"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity="0.42"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" stroke="#1d3550" stroke-width="0.6" fill="none" opacity="0.55"/>
+    </pattern>
+    <style>
+      .eyebrow { font: 700 14px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #8aa3bb; letter-spacing: 0.22em; }
+      .title { font: 800 56px -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; fill: #f4f9ff; letter-spacing: -0.01em; }
+      .subtitle { font: 500 21px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #c7d3e1; }
+      .tagline { font: 500 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #93a7bc; }
+      .mono { font: 600 13px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #8ff2df; letter-spacing: 0.08em; }
+      .micro { font: 700 11px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #9aafc4; letter-spacing: 0.18em; }
+      .label { font: 600 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #dce8f4; }
+      .axis { font: 600 11px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #6b829a; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="540" fill="url(#bg)"/>
+  <rect width="1280" height="540" fill="url(#grid)" opacity="0.65"/>
+
+  <g transform="translate(72 78)">
+    <text class="eyebrow" textLength="430" lengthAdjust="spacingAndGlyphs">VISUALIZATION SPIKE &#8226; STREAMLIT</text>
+    <text class="title" y="74">The fractals already</text>
+    <text class="title" y="138">in your index.</text>
+    <text class="subtitle" y="184" textLength="640" lengthAdjust="spacingAndGlyphs">Hilbert curves, HNSW layers, MFDFA spectra, box counting:</text>
+    <text class="subtitle" y="212" textLength="640" lengthAdjust="spacingAndGlyphs">the math under Z-order, H3, S2, HNSW &#8212; shown, not asserted.</text>
+
+    <g transform="translate(0 256)">
+      <g>
+        <rect width="328" height="48" rx="12" fill="url(#card)" stroke="#2c4760" filter="url(#shadow)"/>
+        <text class="mono" x="20" y="22">v0</text>
+        <text class="label" x="60" y="22">Hilbert curve + D2 heatmap</text>
+        <text class="axis" x="60" y="40">implemented</text>
+      </g>
+      <g transform="translate(0 56)">
+        <rect width="328" height="48" rx="12" fill="url(#card)" stroke="#2c4760" filter="url(#shadow)"/>
+        <text class="mono" x="20" y="22">v1</text>
+        <text class="label" x="60" y="22">HNSW layers coloured by LID</text>
+        <text class="axis" x="60" y="40">v0.1.0</text>
+      </g>
+      <g transform="translate(0 112)">
+        <rect width="328" height="48" rx="12" fill="url(#card)" stroke="#2c4760" filter="url(#shadow)"/>
+        <text class="mono" x="20" y="22">v2</text>
+        <text class="label" x="60" y="22">Streaming MFDFA + Hurst boundaries</text>
+        <text class="axis" x="60" y="40">v0.1.0 &#8226; fGn corpus</text>
+      </g>
+      <g transform="translate(0 168)">
+        <rect width="328" height="48" rx="12" fill="url(#card)" stroke="#2c4760" filter="url(#shadow)"/>
+        <text class="mono" x="20" y="22">v3</text>
+        <text class="label" x="60" y="22">Selectivity error fan chart</text>
+        <text class="axis" x="60" y="40">illustrative</text>
+      </g>
+      <g transform="translate(0 224)">
+        <rect width="328" height="48" rx="12" fill="url(#card)" stroke="#2c4760" filter="url(#shadow)"/>
+        <text class="mono" x="20" y="22">v4</text>
+        <text class="label" x="60" y="22">Box counting log-log slope</text>
+        <text class="axis" x="60" y="40">implemented</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(746 60)">
+    <rect width="468" height="420" rx="24" fill="url(#card)" stroke="#2c4760" filter="url(#shadow)"/>
+    <text class="micro" x="28" y="38">FIVE VIEWS &#8212; ONE TEACHING SURFACE</text>
+
+    <g transform="translate(40 64)" stroke="url(#hilbert)" stroke-width="2.6" fill="none" stroke-linecap="round" filter="url(#softGlow)">
+      <path d="M0 0 L0 26 L26 26 L26 0 L52 0 L52 26 L78 26 L78 0 L104 0 L104 26 L130 26 L130 0 L156 0 L156 26 L182 26 L182 0
+               L208 0 L208 26 L234 26 L234 0 L260 0 L260 26 L286 26 L286 0 L312 0 L312 26 L338 26 L338 0 L364 0"/>
+      <path d="M0 60 L26 60 L26 86 L52 86 L52 60 L78 60 L78 86 L104 86 L104 60 L130 60 L130 86 L156 86 L156 60 L182 60 L182 86 L208 86
+               L208 60 L234 60 L234 86 L260 86 L260 60 L286 60 L286 86 L312 86 L312 60 L338 60 L338 86 L364 86"/>
+    </g>
+
+    <g transform="translate(40 168)">
+      <text class="micro" x="0" y="0">MFDFA &#8212; ROLLING WINDOW</text>
+      <line x1="0" y1="22" x2="364" y2="22" stroke="#2c4760" stroke-width="1"/>
+      <path d="M0 70 C40 60 80 88 132 64 C188 38 232 92 282 60 C324 32 348 56 364 50"
+            stroke="url(#warm)" stroke-width="2.6" fill="none" filter="url(#softGlow)"/>
+      <text class="axis" x="0" y="92">a_min</text>
+      <text class="axis" x="364" y="92" text-anchor="end">a_max</text>
+    </g>
+
+    <g transform="translate(40 290)">
+      <text class="micro" x="0" y="0">BOX COUNTING &#8212; log N vs log 1/&#949;</text>
+      <line x1="0" y1="14" x2="0" y2="98" stroke="#314c64"/>
+      <line x1="0" y1="98" x2="364" y2="98" stroke="#314c64"/>
+      <line x1="0" y1="98" x2="364" y2="20" stroke="url(#hilbert)" stroke-width="2.6" stroke-linecap="round" filter="url(#softGlow)"/>
+      <g fill="#55d6be">
+        <circle cx="36" cy="89" r="3"/>
+        <circle cx="80" cy="80" r="3"/>
+        <circle cx="128" cy="70" r="3"/>
+        <circle cx="180" cy="58" r="3"/>
+        <circle cx="232" cy="46" r="3"/>
+        <circle cx="288" cy="34" r="3"/>
+        <circle cx="334" cy="24" r="3"/>
+      </g>
+      <text class="axis" x="0" y="112">scale</text>
+      <text class="axis" x="364" y="112" text-anchor="end">slope &#8776; D_b</text>
+    </g>
+  </g>
+
+  <g transform="translate(72 510)">
+    <text class="mono" x="0" y="0">&#10095; STREAMLIT LIVE  &#8226;  v0/v1/v2/v3/v4 ROUTED FROM SIDEBAR  &#8226;  CHAPTER 14 SOURCE FOR python_training</text>
+  </g>
+</svg>

@@ -1,10 +1,29 @@
-# Fractal Indexing — Visualization Spike
+<p align="center">
+  <img src="assets/readme/indexing-viz-hero.svg" alt="Fractal Indexing Visualization Spike hero graphic" width="100%">
+</p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Status](https://img.shields.io/badge/status-spike-orange.svg)](https://github.com/mhdk1602/fractal-indexing-viz)
+<h1 align="center">Fractal Indexing &#8212; Visualization Spike</h1>
 
-**Interactive visualizations that make the fractal mathematics under modern indexing systems visceral and legible.**
+<p align="center">
+  <strong>Interactive visualizations that make the fractal mathematics under modern indexing systems visceral and legible.</strong>
+</p>
+
+<p align="center">
+  <img alt="Status v0.1.0 spike" src="https://img.shields.io/badge/status-v0.1.0_spike-f5b84b?style=for-the-badge">
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10%2B-3776ab?style=for-the-badge&logo=python&logoColor=white">
+  <img alt="Streamlit" src="https://img.shields.io/badge/streamlit-ready-f25f5c?style=for-the-badge&logo=streamlit&logoColor=white">
+  <a href="https://orcid.org/0009-0003-1036-9477"><img alt="ORCID 0009-0003-1036-9477" src="https://img.shields.io/badge/ORCID-0009--0003--1036--9477-A6CE39?style=for-the-badge&logo=orcid&logoColor=white"></a>
+  <img alt="License MIT" src="https://img.shields.io/badge/license-MIT-55d6be?style=for-the-badge">
+</p>
+
+<p align="center">
+  <a href="#what-it-is">What it is</a> /
+  <a href="#running-the-app">Run</a> /
+  <a href="#purpose">Purpose</a> /
+  <a href="#connection-to-the-wider-research-program">Wider program</a>
+</p>
+
+## What it is
 
 A practitioner who uses Z-order, Hilbert clustering, H3, S2, or HNSW typically does so without seeing the fractal mathematics underneath. This Streamlit application closes that gap. Five views:
 
